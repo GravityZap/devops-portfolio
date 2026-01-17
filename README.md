@@ -45,7 +45,7 @@ npm run dev
 
 ## 🏗 Architecture diagram
 ```mermaid
-flowchart LR
+flowchart TD
     Dev["Developer workstation"]
     Repo["GitHub Repository"]
     
