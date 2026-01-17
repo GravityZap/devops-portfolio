@@ -44,27 +44,26 @@ npm run dev
 ```
 
 ## 🏗 Architecture diagram
-
 ```mermaid
 flowchart LR
-    Dev[Developer workstation]
-    Repo[GitHub Repository]
+    Dev["Developer workstation"]
+    Repo["GitHub Repository"]
     
     subgraph GitHub["GitHub Platform"]
-        Actions[GitHub Actions CI/CD]
-        Cache[Dependency cache]
-        Artifacts[Build artifacts]
+        Actions["GitHub Actions CI/CD"]
+        Cache["Dependency cache"]
+        Artifacts["Build artifacts"]
     end
 
     subgraph Pipeline["CI/CD Pipeline"]
-        Install[Install dependencies]
-        Lint[Lint & quality checks]
-        Build[Production build (Vite)]
-        Test[Optional tests]
+        Install["Install dependencies"]
+        Lint["Lint and quality checks"]
+        Test["Tests"]
+        Build["Production build"]
     end
 
-    Pages[GitHub Pages Hosting]
-    User[End users / Browser]
+    Pages["GitHub Pages hosting"]
+    User["End users / Browser"]
 
     Dev --> Repo
     Repo --> Actions
@@ -77,5 +76,5 @@ flowchart LR
     Build --> Artifacts
     Artifacts --> Pages
     Pages --> User
-    
+
 
