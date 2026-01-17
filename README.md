@@ -1,16 +1,79 @@
-# React + Vite
+# DevOps Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website of a DevOps Engineer with multi-cloud experience.
+Built with React and automatically deployed to GitHub Pages using CI/CD.
 
-Currently, two official plugins are available:
+![Deploy](https://github.com/GravityZap/devops-portfolio/actions/workflows/deploy.yml/badge.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live site
+https://gravityzap.github.io/devops-portfolio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🏗 Architecture
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Developer → GitHub → GitHub Actions → Build → Artifact → GitHub Pages → Browser
+
+- React (Vite)
+- Node.js 22
+- GitHub Actions CI/CD
+- GitHub Pages hosting
+
+---
+
+## 🔄 CI/CD Pipeline
+
+Pipeline is triggered on every push to `main` branch.
+
+Steps:
+1. Checkout source code
+2. Install dependencies
+3. Build production artifacts
+4. Upload artifact
+5. Deploy to GitHub Pages
+
+---
+
+## 💻 Local development
+
+```bash
+npm install
+npm run dev
+
+## 🏗 Architecture diagram
+
+```mermaid
+flowchart LR
+    Dev[Developer workstation]
+    Repo[GitHub Repository]
+    
+    subgraph GitHub["GitHub Platform"]
+        Actions[GitHub Actions CI/CD]
+        Cache[Dependency cache]
+        Artifacts[Build artifacts]
+    end
+
+    subgraph Pipeline["CI/CD Pipeline"]
+        Install[Install dependencies]
+        Lint[Lint & quality checks]
+        Build[Production build (Vite)]
+        Test[Optional tests]
+    end
+
+    Pages[GitHub Pages Hosting]
+    User[End users / Browser]
+
+    Dev --> Repo
+    Repo --> Actions
+
+    Actions --> Install
+    Install --> Cache
+    Install --> Lint
+    Lint --> Test
+    Test --> Build
+    Build --> Artifacts
+    Artifacts --> Pages
+    Pages --> User
+
