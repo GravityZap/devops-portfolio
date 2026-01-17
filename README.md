@@ -41,6 +41,7 @@ Steps:
 ```bash
 npm install
 npm run dev
+```
 
 ## 🏗 Architecture diagram
 
@@ -76,4 +77,5 @@ flowchart LR
     Build --> Artifacts
     Artifacts --> Pages
     Pages --> User
+    
 
