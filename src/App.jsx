@@ -5,12 +5,14 @@ import './App.css'
 import About from "./components/About";
 import DevOps from "./components/DevOps";
 import Experience from "./components/Experience";
+import Hero from "./components/Hero";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Hero />
     <Experience />
     <DevOps />
     <About />
