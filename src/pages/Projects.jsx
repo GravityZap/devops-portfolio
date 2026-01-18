@@ -7,18 +7,6 @@ const projects = [
     stack: ["React", "Vite", "GitHub Actions", "GitHub Pages", "CI/CD"],
     repo: "https://github.com/GravityZap/devops-portfolio",
     live: "https://maciejhofman.cloud"
-  },
-  {
-    name: "Terraform Azure Playground",
-    desc: "Infrastructure as Code playground demonstrating modular Terraform, environments and cloud provisioning on Azure.",
-    stack: ["Terraform", "Azure", "IaC"],
-    repo: "https://github.com/GravityZap",
-  },
-  {
-    name: "Kubernetes Platform Demo",
-    desc: "Cloud-native platform demo with containerized workloads, CI pipelines and observability integration.",
-    stack: ["Kubernetes", "Docker", "CI/CD"],
-    repo: "https://github.com/GravityZap",
   }
 ];
 
