@@ -61,7 +61,7 @@ export default function Expert() {
 
 const styles = {
   section: {
-    padding: "120px 10%",
+    padding: "70px 10% 110px",
     background: "#020617",
     color: "white"
   },

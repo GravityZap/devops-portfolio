@@ -37,8 +37,8 @@ export default function Hero() {
 
 const styles = {
   wrapper: {
-    minHeight: "50vh",
-    paddingTop: 100,          
+    minHeight: "60vh",
+    paddingTop: 80,          
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
