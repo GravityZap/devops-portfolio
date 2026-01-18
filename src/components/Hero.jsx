@@ -1,5 +1,6 @@
 /* eslint-disable-next-line no-unused-vars */
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -23,8 +24,8 @@ export default function Hero() {
         </p>
 
         <div style={styles.actions}>
-          <a href="/platform" style={styles.primary}>Platform</a>
-          <a href="/contact" style={styles.secondary}>Contact</a>
+          <Link to="/platform" style={styles.primary}>Platform</Link>
+          <Link to="/contact" style={styles.secondary}>Contact</Link>
         </div>
       </motion.div>
 
@@ -32,6 +33,7 @@ export default function Hero() {
     </section>
   );
 }
+
 
 const styles = {
   wrapper: {

@@ -1,5 +1,7 @@
 /* eslint-disable-next-line no-unused-vars */
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 export default function Platform() {
   return (
@@ -95,7 +97,7 @@ export default function Platform() {
         </p>
 
         <div style={styles.links}>
-          <a href="/case-studies" style={styles.primary}>View case study</a>
+          <Link to="/case-studies" style={styles.primary}>View case study</Link>
           <a
             href="https://github.com/GravityZap/devops-portfolio"
             target="_blank"

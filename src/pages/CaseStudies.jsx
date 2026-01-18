@@ -1,5 +1,6 @@
 /* eslint-disable-next-line no-unused-vars */
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function CaseStudies() {
   return (
@@ -78,9 +79,9 @@ export default function CaseStudies() {
             View repository on GitHub
           </a>
 
-          <a href="/platform" style={styles.secondary}>
+          <Link to="/platform" style={styles.secondary}>
             View platform architecture →
-          </a>
+          </Link>
         </div>
       </section>
     </motion.main>
