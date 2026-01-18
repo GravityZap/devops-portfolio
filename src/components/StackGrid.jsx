@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 
 const stack = [
-  "AWS", "Azure", "Terraform", "Kubernetes", "Docker",
+  "AWS", "Azure", "Terraform", "Rancher", "Docker",
   "GitHub Actions", "Azure DevOps", "Linux", "Cloudflare",
-  "Jenkins", "Ansible", "Datadog"
+  "Jenkins", "Ansible", "Datadog", "Pingdom", "Sophos", "MySQL"
 ];
 
 export default function StackGrid() {

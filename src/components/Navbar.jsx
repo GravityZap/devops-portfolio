@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav style={styles.nav}>
-      <div style={styles.logo}>maciejhofman.cloud</div>
-
       <div style={styles.links}>
         <NavItem to="/">Home</NavItem>
         <NavItem to="/platform">Platform</NavItem>

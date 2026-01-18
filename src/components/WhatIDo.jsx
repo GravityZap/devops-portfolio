@@ -53,7 +53,7 @@ const styles = {
     border: "1px solid #111827"
   },
   desc: {
-    marginTop: 10,
+    marginTop: 20,
     color: "#9ca3af",
     lineHeight: 1.6
   }

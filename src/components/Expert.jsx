@@ -1,6 +1,6 @@
-import CaseStudyCard from "./CaseStudyCard";
+import CaseStudyCard from "../pages/CaseStudyCard";
 
-export default function Experience() {
+export default function Expert() {
   return (
     <section style={styles.section}>
       <h2 style={styles.header}>Experience & Case Studies</h2>
@@ -22,7 +22,7 @@ export default function Experience() {
 
           responsibilities={[
             "Design and maintenance of AWS-based infrastructure",
-            "Development of container platforms (Docker, Kubernetes, Rancher)",
+            "Development of container platforms (Docker, Rancher)",
             "Building and maintaining CI/CD pipelines",
             "Automation of environments and operational processes",
             "Integration of monitoring, alerting and security layers",
@@ -30,7 +30,7 @@ export default function Experience() {
           ]}
 
           architecture={[
-            "Central Kubernetes-based runtime platform",
+            "Central Docker-based runtime platform",
             "Automated CI/CD pipelines for applications and data workloads",
             "Standardized environments (dev / test / production)",
             "Integrated monitoring, logging and availability checks",
@@ -39,7 +39,7 @@ export default function Experience() {
 
           stack={[
             "AWS (EC2, S3, RDS, Aurora, Redshift, IAM, CloudWatch)",
-            "Kubernetes, Docker, Rancher",
+            "Docker, Rancher",
             "Jenkins (multi-node, declarative pipelines)",
             "Linux, Ansible",
             "Datadog, Pingdom, Cloudflare"
@@ -54,47 +54,6 @@ export default function Experience() {
           ]}
         />
 
-        <CaseStudyCard
-          title="Enterprise CI/CD Platform – Automation & Delivery Systems"
-          role="DevOps / CI Engineer"
-          context="Design and development of CI/CD platforms for enterprise product teams and certification pipelines."
-
-          goal={[
-            "Automate build, test and validation workflows",
-            "Increase reliability of delivery pipelines",
-            "Standardize CI/CD processes across teams"
-          ]}
-
-          responsibilities={[
-            "Design and implementation of CI/CD pipelines",
-            "Maintenance and scaling of CI infrastructure",
-            "Automation of build and test workflows",
-            "Integration of development and quality tools",
-            "Direct collaboration with engineering teams"
-          ]}
-
-          architecture={[
-            "Scalable multi-node CI environments",
-            "Pipeline-driven build, test and certification flows",
-            "Centralized automation and quality validation layers",
-            "Reusable CI templates for multiple products"
-          ]}
-
-          stack={[
-            "Jenkins (multi-node CI)",
-            "Linux",
-            "Git, Gerrit",
-            "Build systems and automated testing frameworks"
-          ]}
-
-          results={[
-            "Shortened delivery and certification cycles",
-            "Improved build reproducibility and reliability",
-            "Significant reduction of manual intervention",
-            "Standardized delivery pipelines across teams",
-            "Increased stability of released products"
-          ]}
-        />
       </div>
     </section>
   );

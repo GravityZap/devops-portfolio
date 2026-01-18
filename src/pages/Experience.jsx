@@ -1,10 +1,11 @@
 /* eslint-disable-next-line no-unused-vars */
 import { motion } from "framer-motion";
+import Expert from "../components/Expert";
 
 export default function Experience() {
   return (
     <motion.main {...pageMotion}>
-      <h1 style={styles.title}>Experience</h1>
+      <Expert />
     </motion.main>
   );
 }
