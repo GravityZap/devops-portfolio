@@ -1,10 +1,9 @@
-/* eslint-disable-next-line no-unused-vars */
 import { motion } from "framer-motion";
 import Expert from "../components/Expert";
 
 export default function Experience() {
   return (
-    <motion.main {...pageMotion}>
+    <motion.main {...pageMotion} style={styles.page}>
       <Expert />
     </motion.main>
   );
@@ -18,8 +17,16 @@ const pageMotion = {
 };
 
 const styles = {
+  page: {
+    paddingTop: 120,
+    paddingBottom: 120,
+    maxWidth: 1100,
+    margin: "0 auto",
+    paddingLeft: 20,
+    paddingRight: 20
+  },
   title: {
-    paddingTop: 140,
-    textAlign: "center"
+    textAlign: "center",
+    marginBottom: 60
   }
 };
