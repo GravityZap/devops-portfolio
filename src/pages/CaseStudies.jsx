@@ -1,5 +1,6 @@
 /* eslint-disable-next-line no-unused-vars */
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function CaseStudies() {
   return (
@@ -78,95 +79,11 @@ export default function CaseStudies() {
             View repository on GitHub
           </a>
 
-          <a href="/platform" style={styles.secondary}>
+          <Link to="/platform" style={styles.secondary}>
             View platform architecture →
-          </a>
+          </Link>
         </div>
       </section>
     </motion.main>
   );
 }
-
-function Block({ title, children }) {
-  return (
-    <div style={styles.block}>
-      <h3>{title}</h3>
-      <div style={styles.blockContent}>{children}</div>
-    </div>
-  );
-}
-
-const pageMotion = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
-  transition: { duration: 0.4 }
-};
-
-const styles = {
-  page: {
-    paddingTop: 110,
-    paddingBottom: 110,
-    maxWidth: 1100,
-    margin: "0 auto",
-    paddingLeft: 20,
-    paddingRight: 20
-  },
-  header: {
-    marginBottom: 80
-  },
-  subtitle: {
-    color: "#9ca3af",
-    marginTop: 12,
-    maxWidth: 600
-  },
-  section: {
-    display: "flex",
-    flexDirection: "column",
-    gap: 48
-  },
-  lead: {
-    fontSize: 18,
-    color: "#9ca3af",
-    lineHeight: 1.7
-  },
-  block: {
-    background: "#0b0f19",
-    border: "1px solid #111827",
-    borderRadius: 16,
-    padding: 22
-  },
-  blockContent: {
-    marginTop: 12,
-    lineHeight: 1.8,
-    color: "#d1d5db"
-  },
-  code: {
-    background: "#020617",
-    borderRadius: 12,
-    padding: 16,
-    fontSize: 14,
-    overflowX: "auto"
-  },
-  links: {
-    display: "flex",
-    gap: 16,
-    flexWrap: "wrap",
-    marginTop: 20
-  },
-  primary: {
-    padding: "12px 26px",
-    borderRadius: 10,
-    background: "#38bdf8",
-    color: "#020617",
-    fontWeight: 600,
-    textDecoration: "none"
-  },
-  secondary: {
-    padding: "12px 26px",
-    borderRadius: 10,
-    border: "1px solid #1f2933",
-    color: "#f8fafc",
-    textDecoration: "none"
-  }
-};

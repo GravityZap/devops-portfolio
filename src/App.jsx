@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar";
@@ -9,14 +9,12 @@ import Contact from "./pages/Contact";
 import CaseStudies from "./pages/CaseStudies";
 import Projects from "./pages/Projects";
 
-
-
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
+      <Routes location={location} key={location.key}>
         <Route path="/" element={<Home />} />
         <Route path="/platform" element={<Platform />} />
         <Route path="/experience" element={<Experience />} />
@@ -30,9 +28,9 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <AnimatedRoutes />
-    </BrowserRouter>
+    </>
   );
 }

@@ -1,3 +1,4 @@
+console.log("HOME RENDER");
 /* eslint-disable-next-line no-unused-vars */
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
