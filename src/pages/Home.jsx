@@ -1,3 +1,4 @@
+/* eslint-disable-next-line no-unused-vars */
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 import WhatIDo from "../components/WhatIDo";
