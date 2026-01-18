@@ -63,16 +63,16 @@ const pageMotion = {
 
 const styles = {
   page: {
-    paddingTop: 140,
-    paddingBottom: 160,
-    maxWidth: 1000,
+    paddingTop: 110,
+    paddingBottom: 110,
+    maxWidth: 1100,
     margin: "0 auto",
-    paddingLeft: "6%",
-    paddingRight: "6%"
+    paddingLeft: 20,
+    paddingRight: 20
   },
 
   hero: {
-    marginBottom: 100
+    marginBottom: 80
   },
 
   subtitle: {
@@ -92,8 +92,8 @@ const styles = {
   card: {
     background: "#0b0f19",
     border: "1px solid #111827",
-    borderRadius: 18,
-    padding: 28,
+    borderRadius: 16,
+    padding: 22,
     textDecoration: "none",
     color: "inherit",
     display: "flex",

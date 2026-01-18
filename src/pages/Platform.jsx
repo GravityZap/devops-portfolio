@@ -174,8 +174,8 @@ const styles = {
   card: {
     background: "#0b0f19",
     border: "1px solid #111827",
-    borderRadius: 18,
-    padding: 28
+    borderRadius: 16,
+    padding: 22
   },
 
   cardDesc: {
@@ -186,7 +186,7 @@ const styles = {
 
   flowSection: {
     textAlign: "center",
-    marginBottom: 140,
+    marginBottom: 90,
     padding: "0 6%"
   },
 

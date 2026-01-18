@@ -41,7 +41,9 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "0 8%",
+    padding: "16px 20px",
+    gap: 14,
+    flexWrap: "wrap",
     background: "rgba(2,6,23,0.75)",
     backdropFilter: "blur(12px)",
     borderBottom: "1px solid #111827",
@@ -54,7 +56,9 @@ const styles = {
   },
   links: {
     display: "flex",
-    gap: 28
+    gap: 16,
+    flexWrap: "wrap",
+    justifyContent: "center"
   },
   link: {
     textDecoration: "none",

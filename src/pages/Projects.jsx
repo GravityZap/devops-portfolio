@@ -61,12 +61,12 @@ const pageMotion = {
 
 const styles = {
   page: {
-    paddingTop: 140,
-    paddingBottom: 140,
+    paddingTop: 110,
+    paddingBottom: 110,
     maxWidth: 1100,
     margin: "0 auto",
-    paddingLeft: "6%",
-    paddingRight: "6%"
+    paddingLeft: 20,
+    paddingRight: 20
   },
   header: {
     marginBottom: 80
@@ -84,8 +84,8 @@ const styles = {
   card: {
     background: "#0b0f19",
     border: "1px solid #111827",
-    borderRadius: 18,
-    padding: 28,
+    borderRadius: 16,
+    padding: 22,
     display: "flex",
     flexDirection: "column",
     gap: 16

@@ -59,8 +59,8 @@ const styles = {
     marginBottom: 24
   },
   title: {
-    fontSize: "clamp(2.6rem, 5vw, 4rem)",
-    lineHeight: 1.1,
+    fontSize: "clamp(36px, 8vw, 72px)",
+    lineHeight: 1.05,
     marginBottom: 24
   },
   subtitle: {
