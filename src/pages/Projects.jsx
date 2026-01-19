@@ -8,6 +8,12 @@ const projects = [
     stack: ["React", "Vite", "GitHub Actions", "GitHub Pages", "CI/CD"],
     repo: "https://github.com/GravityZap/devops-portfolio",
     live: "https://maciejhofman.cloud"
+  },
+  {
+    name: "Azure Terraform Infracost FinOps CI",
+    desc: "Production-inspired Azure platform project integrating Terraform, Infracost and CI pipelines to introduce automated cloud cost estimation and FinOps feedback directly into pull requests.",
+    stack: ["Azure", "Terraform", "Infracost", "GitHub Actions", "Azure DevOps", "FinOps", "CI/CD"],
+    repo: "https://github.com/GravityZap/azure-terraform-infracost-finops-ci"
   }
 ];
 
@@ -40,9 +46,9 @@ export default function Projects() {
             </div>
 
             <div style={styles.links}>
-              <a href={p.repo} target="_blank" rel="noreferrer">GitHub →</a>
+              <Link to={p.repo} target="_blank" rel="noreferrer">GitHub →</Link>
               {p.live && (
-                <a href={p.live} target="_blank" rel="noreferrer">Live →</a>
+                <Link to={p.live} target="_blank" rel="noreferrer">Live →</Link>
               )}
             </div>
           </motion.div>
