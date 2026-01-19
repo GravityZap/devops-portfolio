@@ -46,9 +46,9 @@ export default function Projects() {
             </div>
 
             <div style={styles.links}>
-              <Link to={p.repo} target="_blank" rel="noreferrer">GitHub →</Link>
+              <a href={p.repo} target="_blank" rel="noreferrer">GitHub →</a>
               {p.live && (
-                <Link to={p.live} target="_blank" rel="noreferrer">Live →</Link>
+                <a href={p.live} target="_blank" rel="noreferrer">Live →</a>
               )}
             </div>
           </motion.div>
