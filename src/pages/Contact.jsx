@@ -13,21 +13,21 @@ export default function Contact() {
       </section>
 
       <section style={styles.cards}>
-        <Card
+        <ContactCard
           title="LinkedIn"
           desc="Professional profile, experience and recommendations."
           link="https://www.linkedin.com/in/maciej-hofman-devops-engineer/"
           action="Open profile →"
         />
 
-        <Card
+        <ContactCard
           title="GitHub"
           desc="Public repositories, CI/CD demos and platform projects."
           link="https://github.com/GravityZap"
           action="View repositories →"
         />
 
-        <Card
+        <ContactCard
           title="Email"
           desc="Direct contact for collaboration or job opportunities."
           link="mailto:maciek.hofman@gmail.com"
@@ -44,13 +44,19 @@ export default function Contact() {
   );
 }
 
-function Card({ title, desc, link, action }) {
+function ContactCard({ title, desc, link, action }) {
   return (
-    <a href={link} target="_blank" rel="noreferrer" style={styles.card}>
+    <motion.a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      whileHover={{ y: -6 }}
+      style={styles.card}
+    >
       <h3>{title}</h3>
       <p style={styles.cardDesc}>{desc}</p>
       <span style={styles.action}>{action}</span>
-    </a>
+    </motion.a>
   );
 }
 
@@ -70,11 +76,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20
   },
-
   hero: {
     marginBottom: 80
   },
-
   subtitle: {
     marginTop: 16,
     color: "#9ca3af",
@@ -82,13 +86,11 @@ const styles = {
     lineHeight: 1.7,
     maxWidth: 600
   },
-
   cards: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(260px,1fr))",
     gap: 32
   },
-
   card: {
     background: "#0b0f19",
     border: "1px solid #111827",
@@ -99,20 +101,18 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     gap: 14,
-    transition: "transform .2s ease, box-shadow .2s ease"
+    transition: "box-shadow .25s ease",
+    cursor: "pointer"
   },
-
   cardDesc: {
     color: "#9ca3af",
     lineHeight: 1.6
   },
-
   action: {
     marginTop: "auto",
     color: "#38bdf8",
     fontWeight: 600
   },
-
   footer: {
     marginTop: 140,
     textAlign: "center",
