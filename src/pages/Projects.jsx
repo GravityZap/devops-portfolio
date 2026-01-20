@@ -33,28 +33,45 @@ export default function Projects() {
             key={p.name}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -6 }}
             transition={{ delay: i * 0.1 }}
             style={styles.card}
           >
             <h3>{p.name}</h3>
-            <p style={styles.desc}>{p.desc}</p>
+
+            <p style={styles.desc} title={p.desc}>
+              {p.desc}
+            </p>
 
             <div style={styles.stack}>
               {p.stack.map(tag => (
-                <span key={tag} style={styles.badge}>{tag}</span>
+                <span key={tag} style={styles.badge}>
+                  {tag}
+                </span>
               ))}
             </div>
 
-            <div style={styles.links}>
-              <a href={p.repo} target="_blank" rel="noreferrer">GitHub →</a>
-              {p.live && (
-                <a href={p.live} target="_blank" rel="noreferrer">Live →</a>
-              )}
+            <div style={styles.actions}>
+              <ActionLink href={p.repo}>GitHub →</ActionLink>
+              {p.live && <ActionLink href={p.live}>Live demo →</ActionLink>}
             </div>
           </motion.div>
         ))}
       </section>
     </motion.main>
+  );
+}
+
+function ActionLink({ href, children }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      style={styles.action}
+    >
+      {children}
+    </a>
   );
 }
 
@@ -94,11 +111,19 @@ const styles = {
     padding: 22,
     display: "flex",
     flexDirection: "column",
-    gap: 16
+    gap: 16,
+    transition: "box-shadow .25s ease",
+    boxShadow: "0 0 0 rgba(0,0,0,0)"
   },
   desc: {
     color: "#9ca3af",
-    lineHeight: 1.6
+    lineHeight: 1.6,  
+    display: "-webkit-box",
+    WebkitLineClamp: 4,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+  
+    minHeight: "6.4em"
   },
   stack: {
     display: "flex",
@@ -112,9 +137,15 @@ const styles = {
     color: "#38bdf8",
     fontSize: 13
   },
-  links: {
+  actions: {
     marginTop: "auto",
     display: "flex",
-    gap: 20
+    gap: 22
+  },
+  action: {
+    color: "#38bdf8",
+    fontWeight: 600,
+    textDecoration: "none",
+    transition: "opacity .2s ease, transform .2s ease"
   }
 };
